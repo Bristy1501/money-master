@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title> Money Master</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h3 class="font-bold text-5xl font-[Montserrat] text-center p-10 text-[#31A5AC]">Money Master💰</h3>
+        </div>
+    </header>
+    <main class="mx-auto max-w-[1200px]">
+        <div class="flex flex-row gap-4">
+            <div>
+                <img src="images/money.png" class="mx-8 mt-4">
+            </div>
+            <div class="bg-[#F8F8F8] ">
+                <!-- input field -->
+                <div>
+                    <h4 class="text-center">Income</h4>
+                    <div class="flex flex-row gap-4 items-center justify-center mt-4">
+                        <h4 class=" flex-auto text-right  ">Income:</h4>
+                        <input type="text" id="income" placeholder="Type here"
+                            class="input-sm w-3/5 max-w-xs bg-[#DCDCDC] text-black" />
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-center mt-4">Expenses</h4>
+                    <div class="flex flex-row gap-4 items-center justify-center mt-4">
+                        <h4 class="flex-auto  text-right">Food:</h4>
+                        <input type="text" id="food" placeholder="Type here"
+                            class="input-sm w-3/5 max-w-xs bg-[#DCDCDC] text-black" />
+                    </div>
+                    <div class="flex flex-row gap-4 items-center justify-center mt-4">
+                        <h4 class="flex-auto  text-right">Rent:</h4>
+                        <input type="text" id="rent" placeholder="Type here"
+                            class="input-sm w-3/5 max-w-xs bg-[#DCDCDC] text-black" />
+                    </div>
+                    <div class="flex flex-row gap-4 items-center justify-center mt-4">
+                        <h4 class="flex-auto text-right">Clothes:</h4>
+                        <input type="text" id="clothes" placeholder="Type here"
+                            class="input-sm w-3/5 max-w-xs bg-[#DCDCDC] text-black" />
+                    </div>
+                </div>
+                <div class="justify-center items-center mt-4 text-center mx-auto ">
+                    <button class="btn btn-primary btn-sm rounded-lg text-white" id="calculate-btn">Calculate</button>
+                </div>
+                <div class="justify-center items-center mt-4 mx-auto">
+                    <p class="text-center mt-4">
+                        Total Expenses: <span id="expense"></span>
+                    </p>
+                </div>
+                <div class="justify-center items-center mt-4 mx-auto">
+                    <p class="text-center mt-4">
+                        Balance: <span id="balance"></span>
+                    </p>
+                </div>
+                <div class="justify-center items-center mt-4 mx-auto flex flex-row gap-2">
+                    <p class="flex-1">Save: </p>
+                    <input type="text" id="save" placeholder="Type here"
+                        class="input-sm w-3/5 max-w-xs bg-[#DCDCDC] text-black" />
+                    <p class="flex-1"> % </p>
+                    <button class="btn btn-primary btn-sm w-2/5 rounded-lg text-white ml-4" id="save-btn">Save</button>
+
+
+                </div>
+                <div class="justify-center items-center mt-4 mx-auto">
+                    <p class="text-center mt-4">Saving Amount: <span id="saving"></span>
+                    </p>
+                </div>
+                <div class="justify-center items-center mt-4 mx-auto">
+                    <p class="text-center mt-4">
+                        Remaining Balance: <span id="remaining"></span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <script src="js/utilities.js"></script>
+    <script src="js/calculate.js"></script>
+</body>
+
+</html>
